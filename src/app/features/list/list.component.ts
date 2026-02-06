@@ -1,16 +1,31 @@
 import { Component } from '@angular/core';
-import { ITEMS, Item } from '../../core/mocks/items.mock';
-import { CardComponent } from '../../shared/components/card/card.component';
 import { CommonModule } from '@angular/common';
+import { CardComponent } from '../shared/card/card.component';
+import { ModalComponent } from '../shared/component/modal/modal.component';
+import { PriceBreakdownComponent } from '../shared/component/price-breakdown/price-breakdown.component';
+import { ITEMS, Item } from '../../core/mocks/items.mock';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CardComponent,CommonModule],
+  imports: [CommonModule, CardComponent, ModalComponent, PriceBreakdownComponent],
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
+  styleUrl: './list.component.scss'
 })
-
 export class ListComponent {
   items: Item[] = ITEMS;
+
+  isModalOpen = false;
+  selectedItem: Item | null = null;
+
+  openBreakdown(item: Item) {
+    this.selectedItem = item;
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedItem = null;
+  }
 }
+

@@ -1,0 +1,21 @@
+<div
+  class="modal"
+  *ngIf="isOpen"
+  role="dialog"
+  aria-modal="true"
+>
+  <div class="modal__overlay" (click)="onOverlayClick($event)"></div>
+
+  <div class="modal__content" (click)="onContentClick($event)">
+    <button
+      class="modal__close"
+      type="button"
+      aria-label="Cerrar"
+      (click)="onClose()"
+    >
+      ✕
+    </button>
+
+    <ng-content></ng-content>
+  </div>
+</div>

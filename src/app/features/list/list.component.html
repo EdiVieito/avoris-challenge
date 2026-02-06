@@ -1,8 +1,16 @@
 <div class="list">
-    <app-card
-      *ngFor="let item of items"
-      [title]="item.title"
-      [description]="item.description"
-      [price]="item.price">
-    </app-card>
-  </div>
+  <app-card
+    *ngFor="let item of items"
+    [item]="item"
+    (showBreakdown)="openBreakdown($event)"
+  ></app-card>
+</div>
+
+<app-modal [isOpen]="isModalOpen" (close)="closeModal()">
+  <app-price-breakdown
+    *ngIf="selectedItem"
+    [item]="selectedItem"
+  ></app-price-breakdown>
+</app-modal>
+
+

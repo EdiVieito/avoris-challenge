@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FILTER_SECTIONS, FilterSection } from '../../core/mocks/filters.mock';
 import { FilterSectionComponent } from '../shared/component/filter-section/filter-section.component';
 import { CheckboxComponent } from '../shared/component/checkbox/checkbox.component';
 import { PriceInputComponent } from '../shared/component/price-input/price-input.component';
@@ -7,6 +9,7 @@ import { PriceInputComponent } from '../shared/component/price-input/price-input
   selector: 'app-filter',
   standalone: true,
   imports: [
+    CommonModule,
     FilterSectionComponent,
     CheckboxComponent,
     PriceInputComponent
@@ -14,4 +17,6 @@ import { PriceInputComponent } from '../shared/component/price-input/price-input
   templateUrl: './filter.component.html',
   styleUrl: './filter.component.scss'
 })
-export class FilterComponent {}
+export class FilterComponent {
+  sections: FilterSection[] = FILTER_SECTIONS;
+}

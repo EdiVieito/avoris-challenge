@@ -1,14 +1,26 @@
 <section class="hero">
-    <div class="slide">
-      <img>
+  <div
+    class="hero__slide"
+    *ngFor="let hero of heros; let i = index"
+  >
+    <img
+      class="hero__image"
+      [src]="hero.image"
+      [alt]="hero.alt"
+    />
+
+    <div class="hero__content">
+      <h2 class="hero__title">{{ hero.title }}</h2>
+      <p class="hero__subtitle">{{ hero.subtitle }}</p>
+      <a class="hero__cta" [href]="hero.url">Descubrir</a>
     </div>
-    <div class="slide">
-        <img>
-        
-      </div>
-      <div class="slide">
-        <img>
-      </div>
-    <button>‹</button>
-    <button>›</button>
-  </section>
+  </div>
+
+  <button class="hero__control hero__control--prev" aria-label="Anterior">
+    ‹
+  </button>
+  <button class="hero__control hero__control--next" aria-label="Siguiente">
+    ›
+  </button>
+</section>
+

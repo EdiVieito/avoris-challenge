@@ -1,0 +1,28 @@
+<article class="card">
+    <div class="card__media">
+      <img class="card__img" [alt]="item.alt" [src]="item.img" />
+  
+      <div class="card__badges">
+        <app-badge *ngFor="let b of item.badges" [text]="b"></app-badge>
+      </div>
+    </div>
+  
+    <p class="card__description">
+      {{ item.description }} <span class="card__time">{{ item.daysText }}</span>
+    </p>
+  
+    <h3 class="card__title">{{ item.title }}</h3>
+  
+    <div class="card__bottom">
+      <div class="card__price">
+        <span class="card__from">Desde</span>
+        <span class="card__amount">{{ item.priceText }}</span>
+      </div>
+  
+      <div class="card__actions">
+        <a class="card__link" href="#" (click)="onBreakdownClick($event)">Ver desglose</a>
+        <button class="card__btn" type="button">Reservar</button>
+      </div>
+    </div>
+  </article>
+  

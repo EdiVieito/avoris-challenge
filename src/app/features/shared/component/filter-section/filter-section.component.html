@@ -1,1 +1,11 @@
-<p>filter-section works!</p>
+<details class="filter-section" [open]="open">
+    <summary class="filter-section__header">
+      <span class="filter-section__title">{{ title }}</span>
+      <span class="filter-section__chevron" aria-hidden="true"></span>
+    </summary>
+  
+    <div class="filter-section__content">
+      <ng-content></ng-content>
+    </div>
+  </details>
+  
