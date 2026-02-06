@@ -1,4 +1,5 @@
 <div class="price-input">
-    <input type="number" placeholder="Mínimo" />
-    <input type="number" placeholder="Máximo" />
-</div>
+    <input type="number" placeholder="Mínimo" (input)="onMin(($any($event.target)).value)" />
+    <input type="number" placeholder="Máximo" (input)="onMax(($any($event.target)).value)" />
+  </div>
+  

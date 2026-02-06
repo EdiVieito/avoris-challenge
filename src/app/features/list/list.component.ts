@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { CardComponent } from '../shared/card/card.component';
 import { ModalComponent } from '../shared/component/modal/modal.component';
 import { PriceBreakdownComponent } from '../shared/component/price-breakdown/price-breakdown.component';
-import { ITEMS, Item } from '../../core/mocks/items.mock';
+import { Item } from '../../core/mocks/items.mock';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +14,7 @@ import { ITEMS, Item } from '../../core/mocks/items.mock';
   styleUrl: './list.component.scss'
 })
 export class ListComponent {
-  items: Item[] = ITEMS;
+  @Input() items: Item[] = [];
 
   isModalOpen = false;
   selectedItem: Item | null = null;
@@ -28,4 +29,3 @@ export class ListComponent {
     this.selectedItem = null;
   }
 }
-

@@ -1,25 +1,27 @@
 <aside class="filter" aria-label="Filtros">
     <h2 class="filter__title">Filtrar mi búsqueda</h2>
   
-    <app-filter-section
-      *ngFor="let section of sections"
-      [title]="section.title"
-    >
+    <app-filter-section *ngFor="let section of sections" [title]="section.title">
+  
       <!-- Checkbox sections -->
       <ng-container *ngIf="section.type === 'checkbox'">
         <app-checkbox
           *ngFor="let item of section.items"
+          [id]="item.id"
           [label]="item.label"
           [checked]="!!item.checked"
+          (checkedChange)="onTagChange(item.id, $event)"
         ></app-checkbox>
-  
-    
       </ng-container>
   
       <!-- Price section -->
       <ng-container *ngIf="section.type === 'price'">
-        <app-price-input></app-price-input>
+        <app-price-input
+          (minChange)="onMinPriceChange($event)"
+          (maxChange)="onMaxPriceChange($event)"
+        ></app-price-input>
       </ng-container>
+  
     </app-filter-section>
   </aside>
   
