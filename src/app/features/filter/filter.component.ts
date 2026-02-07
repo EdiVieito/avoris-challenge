@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output,HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FILTER_SECTIONS, FilterSection } from '../../core/mocks/filters.mock';
@@ -20,6 +20,23 @@ export interface FilterState {
   styleUrl: './filter.component.scss'
 })
 export class FilterComponent {
+  isFilterOpen = false;
+
+  toggleFilter(): void {
+    this.isFilterOpen = !this.isFilterOpen;
+  }
+
+  closeFilter(): void {
+    this.isFilterOpen = false;
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  onKeydown(event: KeyboardEvent): void {
+    if (event.key === 'Escape' && this.isFilterOpen) {
+      this.closeFilter();
+    }
+  }
+
   @Output() filterChange = new EventEmitter<FilterState>();
 
   sections: FilterSection[] = FILTER_SECTIONS;

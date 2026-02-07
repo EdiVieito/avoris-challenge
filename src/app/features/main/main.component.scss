@@ -1,8 +1,20 @@
+@use 'breakpoints' as *;
+
 .main{
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: repeat(2, auto);
     gap: 1em;
+
+    @include desktop-down {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    @include mobile-down {
+        position: inherit;
+      }
+
     &__header{
         padding: 3em 0;
         text-align: center;
@@ -23,6 +35,11 @@
     &__filter {
         grid-area: 2 / 1 / 3 / 2;
         max-width: 264px;
+        @include tablet-down {
+            max-width: 100%;
+            justify-content: center;
+            display: flex;
+        }
     }
     &__content{
         grid-area: 2 / 2 / 3 / 3;

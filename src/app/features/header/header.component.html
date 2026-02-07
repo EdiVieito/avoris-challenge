@@ -23,7 +23,18 @@
     </svg>
   </a>
 
-  <nav class="site-header__nav" aria-label="Navegación principal">
+  <button
+      class="site-header__toggle"
+      type="button"
+      aria-controls="main-nav"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Abrir menú"
+      (click)="toggleMenu()"
+    >
+      ☰
+    </button>
+  <nav id="main-nav" class="site-header__nav" [class.is-open]="isMenuOpen"
+  (click)="onNavClick($event)" aria-label="Navegación principal">
     <ul class="site-header__menu">
       <li class="site-header__item">
         <a class="site-header__link site-header__link--active" href="#">

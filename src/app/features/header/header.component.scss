@@ -1,14 +1,35 @@
+@use 'breakpoints' as *;
 .site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 5em;
     padding: 0 1em;
     border-bottom: 1px solid var(--color-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--color-bg);
   
     &__nav {
         flex: 1;
         display: flex;
         justify-content: center;
+        position: relative;
+        @include desktop-down {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 3;
+            background-color: var(--color-bg);
+            display: none;
+            &.is-open{
+                display: flex;
+            }
+          }
     }
   
     &__menu {
@@ -20,8 +41,22 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        @include desktop-down {
+            position: absolute;
+            top: 5em;
+            left: 0;
+            max-width: 100%;
+            flex-direction: column;
+            background-color: var(--color-bg);
+            box-shadow: 0 6px 12px -6px rgba(0, 0, 0, 0.5);
+          }
     }
   
+    &__item{
+        @include desktop-down {
+            width: 100%;
+          }
+    }
     &__link {
       color: var(--color-text);
       min-height: 5em;
@@ -32,6 +67,9 @@
       gap: 0.5em;
       text-decoration: none;
       position: relative;
+      @include desktop-down {
+       justify-content: center;
+      }
   
       &--active {
         font-weight: 700;
@@ -55,6 +93,22 @@
 
     &__icon {
       flex-shrink: 0;
+    }
+
+    &__cta{
+        @include desktop-down {
+            display: none;
+          }
+    }
+
+    &__toggle{
+        display: none;
+        @include desktop-down {
+            display: block;
+            background: transparent;
+            border: none;
+            font-size: 1.3em;
+          }
     }
   }
   

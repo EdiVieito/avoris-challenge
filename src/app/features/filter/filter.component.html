@@ -1,4 +1,5 @@
-<button class="btn btn--filter-toggle">
+<button class="btn btn--filter-toggle"  aria-label="Ver filtros"
+(click)="toggleFilter()">
     <span class="btn__filter-icon" aria-hidden="true">
         <span></span>
   <span></span>
@@ -7,13 +8,14 @@
     Ver filtros
   </button>
 
-<aside class="filter" aria-label="Filtros">
+<aside class="filter" aria-label="Filtros" [class.is-open]="isFilterOpen">
     <div class="filter__header">
     <h2 class="filter__title">Filtrar mi búsqueda</h2>
     <button
       class="filter__close btn--close"
       type="button"
       aria-label="Cerrar"
+      (click)="toggleFilter()"
     >
       ✕
     </button>

@@ -1,13 +1,16 @@
+@use 'breakpoints' as *;
 .footer {
     &__brand {
        background-color: var(--color-filter);
        display: flex;
        justify-content: center;
        align-items: center;
-       min-height: 8em;
-       margin-top: 3em;
+       padding: 2.6em;
        border-top: 1px solid color-mix(in srgb, var(--color-accent) 16%, transparent);;
+       @include desktop-down {
+        justify-content: start;
       }
+    }
   
     &__legal {
       background-color: var(--color-footer);
