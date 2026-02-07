@@ -5,5 +5,27 @@
       [checked]="checked"
       (change)="onChange($event)"
     />
-    <span class="checkbox__label">{{ label }}</span>
-  </label>
+  
+    <span class="checkbox__label">
+      {{ label }}
+  
+      <span class="checkbox__tooltip">
+        <button
+          class="checkbox__tooltip-trigger"
+          type="button"
+          aria-describedby="checkbox-tooltip-info"
+        >
+          <span class="visually-hidden">Más información</span>
+          i
+        </button>
+  
+        <span
+          class="checkbox__tooltip-content"
+          role="tooltip"
+          id="checkbox-tooltip-info"
+        >
+          Este es el contenido del tooltip.
+        </span>
+      </span>
+    </span>
+  </label>  

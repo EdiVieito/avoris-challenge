@@ -10,11 +10,11 @@
       }
   
     &__legal {
-      font-size: 0.75rem;
       background-color: var(--color-footer);
     }
     &__copyright{
         font-size: 0.875em;
+        font-weight: 700;
         text-align: center;
         color: var(--color-accent);
         margin: 0;

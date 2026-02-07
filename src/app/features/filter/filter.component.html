@@ -1,6 +1,24 @@
+<button class="btn btn--filter-toggle">
+    <span class="btn__filter-icon" aria-hidden="true">
+        <span></span>
+  <span></span>
+  <span></span>
+    </span>
+    Ver filtros
+  </button>
+
 <aside class="filter" aria-label="Filtros">
+    <div class="filter__header">
     <h2 class="filter__title">Filtrar mi búsqueda</h2>
-  
+    <button
+      class="filter__close btn--close"
+      type="button"
+      aria-label="Cerrar"
+    >
+      ✕
+    </button>
+</div>
+<div class="filter__content">
     <app-filter-section *ngFor="let section of sections" [title]="section.title" [icon]="section.icon ?? ''">
   
       <!-- Checkbox sections -->
@@ -23,5 +41,6 @@
       </ng-container>
   
     </app-filter-section>
+</div>
   </aside>
   

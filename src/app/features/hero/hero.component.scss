@@ -38,28 +38,26 @@
     }
   
     &__title {
-        font-size: 1.875em;
+        font-size: 2.125em;
         margin: 0;
     }
   
     &__subtitle {
-        font-size: 1.25em;
+        font-size: 1.5em;
         margin: .5em;
         margin-bottom: 3em;
         font-weight: 500;
     }
-  
-    &__cta {
-     
-    }
+
   
     &__control {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       z-index: 2;
-      width: 2.5em;
-      height: 2.5em;
+      font-size: 1.5em;
+      width: 40px;
+      height: 40px;
       border: none;
       cursor: pointer;
       display: grid;
@@ -82,8 +80,11 @@
     }
   
     &__dot {
+        padding: 0;
       width: 10px;
       height: 10px;
+      aspect-ratio: 1 / 1;
+      display: inline-block;
       border-radius: 100%;
       border: 1px solid var(--color-bg);
       cursor: pointer;
