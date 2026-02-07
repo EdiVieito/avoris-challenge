@@ -1,6 +1,9 @@
 <details class="filter-section" [open]="open">
     <summary class="filter-section__header">
-      <span class="filter-section__title"><span class="icon"></span>{{ title }}</span>
+      <span class="filter-section__title">
+        <svg class="icon" aria-hidden="true" focusable="false">
+            <use [attr.href]="'/assets/icons.svg#icon-' + icon"></use>
+          </svg>{{ title }}</span>
       <span class="filter-section__chevron" aria-hidden="true"></span>
     </summary>
   

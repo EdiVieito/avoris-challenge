@@ -1,7 +1,7 @@
 <aside class="filter" aria-label="Filtros">
     <h2 class="filter__title">Filtrar mi búsqueda</h2>
   
-    <app-filter-section *ngFor="let section of sections" [title]="section.title">
+    <app-filter-section *ngFor="let section of sections" [title]="section.title" [icon]="section.icon ?? ''">
   
       <!-- Checkbox sections -->
       <ng-container *ngIf="section.type === 'checkbox'">

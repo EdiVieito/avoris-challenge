@@ -1,0 +1,46 @@
+.price-input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75em;
+  
+    .input-field {
+      position: relative;
+      flex: 1;
+  
+      input {
+        width: 100%;
+        padding: .75em;
+        padding-left: 2.2em;
+        border: 1px solid var(--color-accent);
+        border-radius: var(--border-radius);
+        font-family: var(--font-base);
+  
+        &:focus {
+          outline: none;
+  
+          ~ .input-icon {
+            fill: var(--color-primary);
+          }
+        }
+  
+        &:not(:placeholder-shown) {
+          ~ .input-icon {
+            opacity: 0;
+          }
+        }
+      }
+  
+      .input-icon {
+        position: absolute;
+        left: .6em;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1em;
+        height: 1em;
+        fill: var(--color-accent);
+        pointer-events: none;
+        transition: opacity .2s ease, fill .2s ease;
+      }
+    }
+  }
+  

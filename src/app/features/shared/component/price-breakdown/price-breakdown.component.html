@@ -3,10 +3,9 @@
       <h3 class="breakdown__title">Desglose de precios</h3>
     </div>
   
-    <p class="breakdown__subtitle">
-      <strong>{{ item.location }}</strong> <span>{{ item.daysText }}</span>
-    </p>
-  
+    <p class="breakdown__description">
+        <strong>{{ item.location }}</strong> <span>{{ item.daysText }}</span>
+      </p>
     <ul class="breakdown__list">
       <li class="breakdown__row" *ngFor="let line of item.breakdown.lines">
         <span>{{ line.label }}</span>

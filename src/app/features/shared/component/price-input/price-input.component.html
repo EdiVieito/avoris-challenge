@@ -1,5 +1,36 @@
 <div class="price-input">
-    <input type="number" placeholder="Mínimo" (input)="onMin(($any($event.target)).value)" />
-    <input type="number" placeholder="Máximo" (input)="onMax(($any($event.target)).value)" />
+
+    <div class="input-field">
+      <svg
+        class="input-icon"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/assets/icons.svg#icon-tag"></use>
+      </svg>
+  
+      <input
+        type="number"
+        placeholder="Mínimo"
+        (input)="onMin(($any($event.target)).value)"
+      />
+    </div>
+  
+    <div class="input-field">
+      <svg
+        class="input-icon"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/assets/icons.svg#icon-tag"></use>
+      </svg>
+  
+      <input
+        type="number"
+        placeholder="Máximo"
+        (input)="onMax(($any($event.target)).value)"
+      />
+    </div>
+  
   </div>
   

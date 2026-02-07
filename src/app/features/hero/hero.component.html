@@ -1,26 +1,45 @@
-<section class="hero">
+<section class="hero" aria-label="Promociones destacadas">
   <div
     class="hero__slide"
     *ngFor="let hero of heros; let i = index"
+    [class.is-active]="i === activeIndex"
+    [attr.aria-hidden]="i === activeIndex ? 'false' : 'true'"
   >
-    <img
-      class="hero__image"
-      [src]="hero.image"
-      [alt]="hero.alt"
-    />
+    <img class="hero__image" [src]="hero.image" [alt]="hero.alt" />
 
     <div class="hero__content">
       <h2 class="hero__title">{{ hero.title }}</h2>
       <p class="hero__subtitle">{{ hero.subtitle }}</p>
-      <a class="hero__cta" [href]="hero.url">Descubrir</a>
+      <a class="hero__cta btn btn--orange" [href]="hero.url">Más información</a>
     </div>
   </div>
 
-  <button class="hero__control hero__control--prev" aria-label="Anterior">
+  <button
+    class="hero__control hero__control--prev"
+    type="button"
+    aria-label="Anterior"
+    (click)="prev()"
+  >
     ‹
   </button>
-  <button class="hero__control hero__control--next" aria-label="Siguiente">
+
+  <button
+    class="hero__control hero__control--next"
+    type="button"
+    aria-label="Siguiente"
+    (click)="next()"
+  >
     ›
   </button>
-</section>
 
+  <div class="hero__dots" role="tablist" aria-label="Paginación del carrusel">
+    <button
+      class="hero__dot"
+      *ngFor="let _ of heros; let i = index"
+      type="button"
+      [class.is-active]="i === activeIndex"
+      [attr.aria-label]="'Ir al slide ' + (i + 1)"
+      (click)="goTo(i)"
+    ></button>
+  </div>
+</section>

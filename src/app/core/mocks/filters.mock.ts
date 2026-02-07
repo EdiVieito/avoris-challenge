@@ -16,6 +16,7 @@ export interface FilterItem {
     {
       id: 'destinos',
       title: 'Destinos',
+      icon: 'earth',
       type: 'checkbox',
       items: [
         { id: 'marruecos', label: 'Marruecos' },
@@ -25,6 +26,7 @@ export interface FilterItem {
     {
       id: 'aventura',
       title: 'Aventura',
+      icon: 'mountain',
       type: 'checkbox',
       items: [
         { id: 'quads', label: 'Quads' },
@@ -42,6 +44,7 @@ export interface FilterItem {
     {
         id: 'alojamiento',
         title: 'Alojamiento',
+        icon: 'home',
         type: 'checkbox',
         items: [
           { id: 'hotel', label: 'Hotel' },
@@ -52,6 +55,7 @@ export interface FilterItem {
     {
       id: 'precio',
       title: 'Precio',
+      icon: 'tag',
       type: 'price'
     }
   ];
