@@ -1,0 +1,21 @@
+.main{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 1em;
+    &__title{
+        padding: 3em 0;
+        text-align: center;
+         grid-area: 1 / 1 / 2 / 3;
+         h1,p{
+            margin: 0;
+         }
+    }
+    &__filter {
+        grid-area: 2 / 1 / 3 / 2;
+        max-width: 264px;
+    }
+    &__content{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}

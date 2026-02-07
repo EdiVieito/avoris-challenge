@@ -1,0 +1,23 @@
+.footer {
+    &__brand {
+       background-color: var(--color-filter);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 8em;
+       margin-top: 3em;
+       border-top: 1px solid color-mix(in srgb, var(--color-accent) 16%, transparent);;
+      }
+  
+    &__legal {
+      font-size: 0.75rem;
+      background-color: var(--color-footer);
+    }
+    &__copyright{
+        font-size: 0.875em;
+        text-align: center;
+        color: var(--color-accent);
+        margin: 0;
+        padding: 1em;
+    }
+  }

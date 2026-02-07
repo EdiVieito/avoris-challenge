@@ -1,0 +1,36 @@
+.filter-section{
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 3em;
+        list-style: none;
+    }
+    &__title{
+        display: flex;
+        gap: .5em;
+    }
+    &__chevron{
+        width: .5em;
+    height: .5em;
+    margin: .5em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform 0.15s ease;
+    }
+
+    &[open] &__chevron {
+        transform: rotate(45deg);
+      }
+
+      &[open] &__header{
+        font-weight: 700;
+        color: color-mix(in srgb,var(--color-primary) 70%,#000 30%);
+    }      
+    &__content{
+        display: flex;
+        padding: 0 1em;
+        flex-direction: column;
+    }
+}

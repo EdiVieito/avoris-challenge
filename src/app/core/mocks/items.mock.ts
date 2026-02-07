@@ -10,7 +10,6 @@ export interface Item {
   title: string;        
   location: string;    
   daysText: string;  
-  description: string;
   img: string;
   alt: string;
 
@@ -37,7 +36,6 @@ export const ITEMS: Item[] = [
     title: 'Ruta en quad por el desierto',
     location: 'Marruecos, África',
     daysText: '9 días',
-    description: 'Aventura en quad por el desierto',
     img: 'https://picsum.photos/seed/avoris-1/264/188',
     alt: 'Ruta en quad',
     badges: ['Aventura'],
@@ -57,7 +55,6 @@ export const ITEMS: Item[] = [
     title: 'Surf en la costa atlántica',
     location: 'Agadir, Marruecos',
     daysText: '7 días',
-    description: 'Experiencia de surf y relax',
     img: 'https://picsum.photos/seed/avoris-2/264/188',
     alt: 'Surf en la costa',
     badges: ['Explora'],
@@ -77,7 +74,6 @@ export const ITEMS: Item[] = [
     title: 'Rafting en ríos de montaña',
     location: 'Atlas, Marruecos',
     daysText: '10 días',
-    description: 'Rafting y naturaleza',
     img: 'https://picsum.photos/seed/avoris-3/264/188',
     alt: 'Rafting en montaña',
     badges: ['Aventura'],
@@ -97,7 +93,6 @@ export const ITEMS: Item[] = [
     title: 'Parapente sobre la costa',
     location: 'Essaouira, Marruecos',
     daysText: '5 días',
-    description: 'Vuelos y actividades costeras',
     img: 'https://picsum.photos/seed/avoris-4/264/188',
     alt: 'Parapente en la costa',
     badges: ['Aventura'],
@@ -117,7 +112,6 @@ export const ITEMS: Item[] = [
     title: 'Escapada cultural urbana',
     location: 'Marrakech, Marruecos',
     daysText: '4 días',
-    description: 'Cultura, mercados y gastronomía',
     img: 'https://picsum.photos/seed/avoris-5/264/188',
     alt: 'Ciudad y mercado',
     badges: ['Explora'],
@@ -137,7 +131,6 @@ export const ITEMS: Item[] = [
     title: 'Pack multi-aventura',
     location: 'Ouarzazate, Marruecos',
     daysText: '8 días',
-    description: 'Quads, rutas y experiencias combinadas',
     img: 'https://picsum.photos/seed/avoris-6/264/188',
     alt: 'Multiaventura en desierto',
     badges: ['Aventura', 'Top'],

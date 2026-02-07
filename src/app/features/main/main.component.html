@@ -1,11 +1,15 @@
-<main class="main">
+<main class="main container">
+    <section class="main__title">
+    <h1>Vive tus propias aventuras</h1>
+    <p class="text-muted">Para los que les gusta explorar y conocer mundo sin complejos</p>
+</section>
+        
     <aside class="main__filter">
         <app-filter (filterChange)="onFilterChange($event)"></app-filter>
     </aside>
   
     <section class="main__content">
-        <h1>Vive tus propias aventuras</h1>
-        <p>Para los que les gusta explorar y conocer mundo sin complejos</p>
+        <h3>Asia</h3>
         <app-list [items]="filteredItems"></app-list>
     </section>
   </main>

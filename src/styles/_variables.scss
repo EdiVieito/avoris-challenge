@@ -27,5 +27,23 @@
    /* =========================
       RADIUS
       ========================= */
-   $radius-sm: 1em;
+   $border-radius: 2em;
+
+      /* =========================
+      VARS
+      ========================= */
+   :root {
+    --color-primary: #{$color-orange};
+    --color-accent: #{$color-purple};
+    --color-filter:#{$color-filter};
+    --color-text: #{$color-text};
+    --color-bg: #{$color-bg};
+    --color-muted: #{$color-text-muted};
+    --color-footer: #{$color-footer};
+
+    --border-radius: #{$border-radius};
+
+    --font-title:#{$font-title};
+    --font-base:#{$font-base};
+  }
    

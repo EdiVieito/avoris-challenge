@@ -1,0 +1,9 @@
+.filter{
+    background: var(--color-filter);
+    border-radius: var(--border-radius);
+    padding: 1em;
+    &__title{
+        font-size: 1.125em;
+        text-align: center;
+    }
+}

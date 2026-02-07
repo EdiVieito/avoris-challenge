@@ -1,0 +1,19 @@
+.checkbox{
+    display: flex;
+    align-items: center;
+    &__input{
+        height: 1.1em;
+        width: 1.1em;
+        &:checked{
+            accent-color: var(--color-primary);
+            + .checkbox__label{
+            font-weight: 700;
+            }
+        }
+
+    }
+    &__label{
+        font-size:0.875em;
+        margin-left: .5em;
+    }
+}
