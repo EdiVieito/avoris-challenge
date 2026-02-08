@@ -6,7 +6,7 @@
 
    
    $color-text: #342e34;
-   $color-text-muted: #6b7d8d;
+   $color-text-muted: #6B7D8D;
    
    $color-bg: #ffffff;
    $color-filter: #fbf6f4;
@@ -41,9 +41,20 @@
     --color-muted: #{$color-text-muted};
     --color-footer: #{$color-footer};
 
+    --color-primary-hover: #d67843;
+    --color-accent-hover: #471f45;
+    --color-text-hover: #2d242d;
+    --color-filter-hover: #f4e8e1;
+    --color-bg-hover: #f8f7f8;
+    --color-footer-hover: #d1c7d1;
+
     --border-radius: #{$border-radius};
 
     --font-title:#{$font-title};
     --font-base:#{$font-base};
+   
+    --focus-ring: 2px solid var(--color-focus);
+    --focus-offset: 2px;
+           
   }
    

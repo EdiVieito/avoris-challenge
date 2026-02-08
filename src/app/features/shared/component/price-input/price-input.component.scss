@@ -1,6 +1,7 @@
 .price-input {
     display: grid;
     grid-template-columns: 1fr;
+    margin-top: .5em;
     gap: .75em;
   
     .input-field {
@@ -14,10 +15,12 @@
         border: 1px solid var(--color-accent);
         border-radius: var(--border-radius);
         font-family: var(--font-base);
+
+        &:hover {
+           background-color: var(--color-bg-hover);
+          }
   
         &:focus {
-          outline: none;
-  
           ~ .input-icon {
             fill: var(--color-primary);
           }

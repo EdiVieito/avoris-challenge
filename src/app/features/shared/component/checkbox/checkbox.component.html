@@ -13,7 +13,7 @@
         <button
           class="checkbox__tooltip-trigger"
           type="button"
-          aria-describedby="checkbox-tooltip-info"
+          [attr.aria-describedby]="'checkbox-tooltip-info-' + toStr(label)"
         >
           <span class="visually-hidden">Más información</span>
           i
@@ -22,7 +22,7 @@
         <span
           class="checkbox__tooltip-content"
           role="tooltip"
-          id="checkbox-tooltip-info"
+          id="checkbox-tooltip-info-{{ label }}"
         >
           Este es el contenido del tooltip.
         </span>

@@ -1,4 +1,4 @@
-import { Component,HostListener } from '@angular/core';
+import { Component,HostListener,ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +9,22 @@ import { Component,HostListener } from '@angular/core';
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  @ViewChild('menuToggle', { read: ElementRef })
+  menuToggle!: ElementRef<HTMLButtonElement>;
+
+  @ViewChild('firstNavLink', { read: ElementRef })
+  firstNavLink!: ElementRef<HTMLAnchorElement>;
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+
+    queueMicrotask(() => {
+      if (this.isMenuOpen) {
+        this.firstNavLink?.nativeElement.focus();
+      } else {
+        this.menuToggle?.nativeElement.focus();
+      }
+    });
   }
 
   closeMenu(): void {

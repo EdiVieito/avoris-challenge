@@ -1,6 +1,12 @@
 .checkbox {
     display: flex;
     align-items: center;
+    min-height: 3em;
+    cursor: pointer;
+
+    &:hover {
+        color: color-mix(in srgb, var(--color-primary) 70%, #000 30%);
+      }
   
     &__input {
       height: 1.1em;
@@ -36,10 +42,13 @@
       line-height: 1;
       cursor: pointer;
       border: 1px solid currentColor;
-  margin-left: .5em;
+      margin-left: .5em;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      &:hover {
+        background-color: var(--color-filter-hover);
+      }
     }
   
     &__tooltip-content {

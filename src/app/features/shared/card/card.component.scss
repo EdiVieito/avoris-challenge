@@ -90,6 +90,7 @@
     text-decoration: underline;
     cursor: pointer;
     justify-self: start;
+    white-space: nowrap;
     &::after {
       content: '';
       display: inline-block;
@@ -100,6 +101,9 @@
     border-right: 2px solid currentColor;
     border-bottom: 2px solid currentColor;
     transform: rotate(45deg)
+    }
+    :hover {
+     color: var(--color-accent-hover);
     }
   }
 

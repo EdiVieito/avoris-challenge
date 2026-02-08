@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 4;
     background: var(--color-bg);
   
     &__nav {
@@ -67,6 +67,16 @@
       gap: 0.5em;
       text-decoration: none;
       position: relative;
+
+      &:hover {
+        background-color: var(--color-bg-hover);
+      }
+
+
+      &:active {
+        transform: translateY(1px);
+      }
+
       @include desktop-down {
        justify-content: center;
       }
@@ -105,9 +115,18 @@
         display: none;
         @include desktop-down {
             display: block;
+            cursor: pointer;
             background: transparent;
             border: none;
             font-size: 1.3em;
+
+            &:hover {
+                background-color: var(--color-bg-hover);
+              }
+            
+              &:active {
+                transform: translateY(1px);
+              }
           }
     }
   }

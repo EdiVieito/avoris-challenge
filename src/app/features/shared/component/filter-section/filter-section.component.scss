@@ -5,7 +5,12 @@
         align-items: center;
         min-height: 3em;
         list-style: none;
+        cursor: pointer;
+        &:hover {
+            background-color: var(--color-filter-hover);
+          }
     }
+    
     &__title{
         display: flex;
         gap: .5em;

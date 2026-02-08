@@ -12,6 +12,10 @@
     @include desktop-down {
         opacity: 1;
         pointer-events:initial;
+        &:hover {
+            background-color: var(--color-filter-hover);
+            color: var(--color-text-hover);
+          }
       }
 }
 
@@ -98,6 +102,9 @@
             position: relative;
         top: auto;
         right: auto;
+        &:hover {
+            background-color: var(--color-filter-hover);
+          }
         }
     }
 

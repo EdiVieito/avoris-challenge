@@ -17,4 +17,8 @@ export class CheckboxComponent {
     const input = event.target as HTMLInputElement;
     this.checkedChange.emit(input.checked);
   }
+
+  toStr(v: unknown): string {
+    return String(v ?? '');
+  }
 }
