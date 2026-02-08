@@ -14,7 +14,7 @@
         pointer-events:initial;
         &:hover {
             background-color: var(--color-filter-hover);
-            color: var(--color-text-hover);
+            color: var(--color-text);
           }
       }
 }
@@ -58,7 +58,7 @@
         left: 0;
         border-radius: 0;
         min-width: 18.5em;
-        z-index: 4;
+        z-index: 3;
         height: 100%;
         display: none;
         box-shadow: 6px 0 12px -6px rgba(0, 0, 0, 0.5);
@@ -67,15 +67,18 @@
         }
       }
       @include mobile-down {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         border-radius: 0;
-        min-width: 100%;
+        min-width: 100vw;
+        min-height: 100dvh;
         z-index: 1000;
+        overflow-y: auto;
         display: none;
         &.is-open{
             display: block;
+            height: 100%;
         }
       }
 
