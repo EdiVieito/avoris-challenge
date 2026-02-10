@@ -42,7 +42,6 @@ export class HeaderComponent {
     const target = event.target as HTMLElement | null;
     if (!target) return;
 
-    // Cierra solo si han clickado un enlace real
     if (target.closest('a')) {
       this.closeMenu();
     }

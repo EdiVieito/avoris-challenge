@@ -23,7 +23,6 @@
 <div class="filter__content">
     <app-filter-section *ngFor="let section of sections" [title]="section.title" [icon]="section.icon ?? ''">
   
-      <!-- Checkbox sections -->
       <ng-container *ngIf="section.type === 'checkbox'">
         <app-checkbox
           *ngFor="let item of section.items"
@@ -34,7 +33,6 @@
         ></app-checkbox>
       </ng-container>
   
-      <!-- Price section -->
       <ng-container *ngIf="section.type === 'price'">
         <app-price-input
           (minChange)="onMinPriceChange($event)"

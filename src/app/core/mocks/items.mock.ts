@@ -6,24 +6,19 @@ export interface PriceBreakdownLine {
 export interface Item {
   id: string;
 
-  // Card UI
   title: string;        
   location: string;    
   daysText: string;  
   img: string;
   alt: string;
 
-  // Labels
   badges: string[]; 
 
-  // Precio (para UI y para filtrar)
   priceValue: number;   
   priceText: string; 
 
-  // Para filtro
   tags: string[];      
 
-  // Modal
   breakdown: {
     lines: PriceBreakdownLine[];
     total: number;

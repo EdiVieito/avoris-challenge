@@ -9,6 +9,6 @@ import { Component, Input } from '@angular/core';
 export class FilterSectionComponent {
   @Input() title = '';
   @Input() icon = '';
-  @Input() open = true; // para poder dejar abierto uno por defecto y mejorar el UX
+  @Input() open = true;
 }
 

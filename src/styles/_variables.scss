@@ -1,6 +1,4 @@
-/* =========================
-   COLORS
-   ========================= */
+
    $color-orange: #FF8F50;
    $color-purple: #5a2d82;
 
@@ -12,9 +10,6 @@
    $color-filter: #fbf6f4;
    $color-footer: #e0d9e0;
    
-   /* =========================
-      TYPOGRAPHY
-      ========================= */
    $font-title: 'Syne', sans-serif;
    $font-base: 'Nunito', sans-serif;
    $font-size:16px;
@@ -23,15 +18,9 @@
    $font-weight-medium: 600;
    $font-weight-bold: 700;
 
-   
-   /* =========================
-      RADIUS
-      ========================= */
    $border-radius: 2em;
 
-      /* =========================
-      VARS
-      ========================= */
+
    :root {
     --color-primary: #{$color-orange};
     --color-accent: #{$color-purple};

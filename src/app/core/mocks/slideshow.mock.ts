@@ -1,4 +1,4 @@
-export interface HeroCTA {
+export interface SlideshowCTA {
     image: string;
     alt: string;
     title: string;
@@ -6,7 +6,7 @@ export interface HeroCTA {
     url: string;
   }
 
-  export const HEROS: HeroCTA[] = [
+  export const SLIDESHOWS: SlideshowCTA[] = [
     {
         image: 'https://picsum.photos/seed/avoris-hero-1/1920/400',
         alt: 'Descripción imagen',

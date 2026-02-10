@@ -1,0 +1,45 @@
+<section class="slideshow" aria-label="Promociones destacadas">
+  <div
+    class="slideshow__slide"
+    *ngFor="let slideshow of slideshows; let i = index"
+    [class.is-active]="i === activeIndex"
+    [attr.aria-hidden]="i === activeIndex ? 'false' : 'true'"
+  >
+    <img class="slideshow__image" [src]="slideshow.image" [alt]="slideshow.alt" />
+
+    <div class="slideshow__content">
+      <h2 class="slideshow__title">{{ slideshow.title }}</h2>
+      <p class="slideshow__subtitle">{{ slideshow.subtitle }}</p>
+      <a class="slideshow__cta btn btn--orange btn--cta" [href]="slideshow.url">Más información</a>
+    </div>
+  </div>
+
+  <button
+    class="slideshow__control slideshow__control--prev"
+    type="button"
+    aria-label="Anterior"
+    (click)="prev()"
+  >
+    ‹
+  </button>
+
+  <button
+    class="slideshow__control slideshow__control--next"
+    type="button"
+    aria-label="Siguiente"
+    (click)="next()"
+  >
+    ›
+  </button>
+
+  <div class="slideshow__dots" aria-label="Paginación del carrusel">
+    <button
+      class="slideshow__dot"
+      *ngFor="let _ of slideshows; let i = index"
+      type="button"
+      [class.is-active]="i === activeIndex"
+      [attr.aria-label]="'Ir al slide ' + (i + 1)"
+      (click)="goTo(i)"
+    ></button>
+  </div>
+</section>
