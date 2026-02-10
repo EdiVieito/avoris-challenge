@@ -2,7 +2,7 @@
  
 **Objetivo** : Maquetar la interfaz a partir de unos mockups, cuidando la estructura del proyecto, el CSS, el responsive y la accesibilidad.
 
-**Alcance**; Se ha sido priorizar una buena base de maquetación, estructura y escalabilidad, más que un pixel-perfect absoluto en todos los detalles.
+**Alcance**; Se ha priorizado una buena base de maquetación, estructura y escalabilidad, más que un pixel-perfect absoluto en todos los detalles.
 
 ---
 
@@ -12,7 +12,7 @@ La aplicación implementa:
 
 - Header fijo con navegación principal
 - Menú responsive tipo hamburguesa en mobile
-- Hero con slider
+- Slideshow
 - Filtro lateral con secciones colapsables
 - Listado de cards
 - Modal de desglose de precio
@@ -60,21 +60,21 @@ ng build
 src/
  ├─ app/
  │   ├─ core/
- │   │   └─ mocks/              # Datos mockeados
+ │   │   └─ mocks/              
  │   │   └─ model
- │   ├─ features/               # Secciones principales
+ │   ├─ features/               
  │   │   ├─ header
- │   │   ├─ hero
+ │   │   ├─ slideshow
  │   │   ├─ filter
  │   │   ├─ list
  │   │   ├─ main
  │   │   ├─ footer
- │   │   └─ shared/            # Componentes reutilizables
+ │   │   └─ shared/            
  │   │       ├─ card
- │   │       ├─ component/     # Componentes más pequeños
+ │   │       ├─ component/     
  │   │           ├─ badge
  │   │           ├─ checkbox
- │   │           ├─ filter-section  #El desplegable del filtro
+ │   │           ├─ filter-section  
  │   │           ├─ modal
  │   │           ├─ price-breakdown
  │   │           └─ price-input        
@@ -82,13 +82,13 @@ src/
  │
  └─ styles/
      ├─ reset.scss
-     ├─ variables.scss        # Colores, tipografías, radios
+     ├─ variables.scss        
      ├─ typography.scss
      ├─ icons.scss
      ├─ layout.scss
      ├─ buttons.scss
-     ├─ utilities.scss          # hidden, visually-hidden, etc.
-     └─ breakpoints.scss        # Mixins responsive
+     ├─ utilities.scss          
+     └─ breakpoints.scss        
 ```
 ---
 
@@ -103,7 +103,7 @@ Durante el desarrollo se han tomado las siguientes decisiones:
 
 - Los datos están mockeados y centralizados en core/mocks, y se pasan a los componentes mediante @Input().
 
-- El menú responsive y el hero utilizan lógica mínima en Angular para gestionar estado, priorizando mantenibilidad y accesibilidad frente a soluciones CSS-only más frágiles.
+- El menú responsive y el slideshow utilizan lógica mínima en Angular para gestionar estado, priorizando mantenibilidad y accesibilidad frente a soluciones CSS-only más frágiles.
 
 
 - El sistema de estilos se basa en CSS variables (colores, tipografías), facilitando futuros cambios de tema.
@@ -120,7 +120,7 @@ Se ha tenido en cuenta la accesibilidad desde la maquetación:
 
 - Uso de etiquetas semánticas modernas (header, nav, main, article, footer...).
 
-- aria-label en botones sin texto visible (menú, controles del hero, cierre de modal).
+- aria-label en botones sin texto visible (menú, controles del slideshow, cierre de modal).
 
 - Navegación por teclado en el menú responsive:
 
